@@ -46,12 +46,19 @@ body {
   font-size: 1.2rem;
   padding: 1rem 1.5rem;
   border-radius: 0.5rem;
+  transition: all 0.3s ease;
 }
-
+.hero-section-content a:hover {
+  background-color: #5a2380;
+}
 .hero-section-content .explore-collections {
   background-color: #f5efe8;
   color: #1b1b1b;
   border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.hero-section-content .explore-collections:hover {
+  background-color: #e0d1c4;
 }
 
 .hero-section-img {
@@ -92,7 +99,6 @@ body {
 }
 
 .shop-by-category .card {
-  border: 0.1rem solid black;
   border-radius: 0.5rem;
   width: 25%;
   height: 30rem;
@@ -104,19 +110,28 @@ body {
 }
 
 .shop-by-category .card:nth-child(1) {
-  background-image: url(/assets/images/img13.jpg);
+  background-image: url(/assets/images/img14.jpg);
 }
-
+.shop-by-category .card:nth-child(2) {
+  background-image: url(/assets/images/img15.jpg);
+}
+.shop-by-category .card:nth-child(3) {
+  background-image: url(/assets/images/img16.jpg);
+}
+.shop-by-category .card:nth-child(4) {
+  background-image: url(/assets/images/img17.jpg);
+}
 .shop-by-category .card-content {
   padding: 2rem;
+  color: #ffffff;
 }
 
 .shop-by-category h4 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .shop-by-category p {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 /* Trending Now */
@@ -199,6 +214,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .content-under-card {
