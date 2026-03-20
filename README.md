@@ -28,7 +28,7 @@
 
 ## Live Demo
 
-**Live demo link will be available upon deployment**
+**https://stylesspherefashion.netlify.app/**
 
 
 ## Features
@@ -54,14 +54,10 @@
 - **CSS3** - Styling, flexbox, grid, and animations
 - **JavaScript (ES6+)** - Core functionality and DOM manipulation
 
-### External Libraries
-- **Font Awesome 6.0** - Icon library for enhanced visual design
-
 ### Tools
-- **Git** - Version control
-- **GitHub** - Code hosting and collaboration
-
----
+- **Git** - version control
+- **Github** - collaboration
+- **Netlify** - project hosting
 
 ## How to Run the Project
 
@@ -145,6 +141,9 @@ Solution: Tested on multiple browsers and used standardized JavaScript methods
 3. Collaborative Work: Understood the importance of clear communication and code organization in team projects
 
 ## License
+This project is licensed under the MIT License.
+
+Note
 This project is for educational purposes only. It was created as a learning exercise to demonstrate front-end development concepts and collaborative coding practices.
 
 Not for commercial use. Feel free to use this code as a reference for your own learning and projects, but please provide appropriate attribution.
