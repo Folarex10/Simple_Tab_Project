@@ -2,7 +2,7 @@
 
 ## Project Description
 
-**StyleSphere** is an interactive front-end web application that demonstrates smooth content switching through tabbed navigation. The project was built as a collaborative learning exercise to master DOM manipulation and create a seamless user experience.
+**StyleSphere** is an interactive front-end web application that demonstrates smooth content switching through tabbed navigation. The pgit statusroject was built as a collaborative learning exercise to master DOM manipulation and create a seamless user experience.
 
 **Purpose:** To create an intuitive interface where users can easily navigate between different content sections without page reloads, improving user engagement and content organization.
 
