@@ -1,127 +1,94 @@
-/* ============================================================
-   services.css — StyleSphere Services Page
-   Page-specific styles only. Do not modify global.css or
-   components.css. Link order: global → components → services
-   ============================================================ */
+/*Services Page Styles*/
 
-/* ── Shared Utilities (used across this page) ── */
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: var(--primary);
-  color: var(--primary-foreground);
-  font-family: var(--font-base);
-  font-size: 0.9rem;
-  font-weight: 500;
-  padding: 0.75rem 1.5rem;
-  border: 2px solid var(--primary);
-  border-radius: var(--radius);
-  cursor: pointer;
-  transition: background-color 0.2s, color 0.2s;
-  text-decoration: none;
+.section-inner {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
-.btn-primary:hover {
-  background-color: transparent;
-  color: var(--primary-foreground);
-  border-color: var(--primary-foreground);
+.section-header-block {
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
-.btn-outline-white {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: transparent;
-  color: var(--primary-foreground);
-  font-family: var(--font-base);
-  font-size: 0.9rem;
-  font-weight: 500;
-  padding: 0.75rem 1.75rem;
-  border: 2px solid var(--primary-foreground);
-  border-radius: var(--radius);
-  cursor: pointer;
-  transition: background-color 0.2s, color 0.2s;
-  text-decoration: none;
-}
-
-.btn-outline-white:hover {
-  background-color: var(--primary-foreground);
-  color: var(--primary);
-}
-
-.section-header {
-  text-align: left;
-  margin-bottom: 2.5rem;
-}
-
-.section-header h2 {
-  font-size: 1.6rem;
+.section-header-block h2 {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
   font-weight: 700;
-  color: var(--foreground);
-  margin-bottom: 0.4rem;
+  color: var(--black);
+  margin-bottom: 0.625rem;
 }
 
-.section-header p {
+.section-header-block p {
   font-size: 0.9rem;
-  color: #888;
+  color: var(--gray);
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 0.8125rem 1.75rem;
+  border: 2px solid var(--white);
+  color: var(--white);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  transition: all var(--transition);
+}
+
+.btn-outline:hover {
+  background: var(--white);
+  color: var(--purple);
 }
 
 
-/* ── 1. HERO BANNER ── */
+/* SERVICES HERO*/
+
 .services-hero {
   position: relative;
-  width: 100%;
-  height: 42vh;
-  min-height: 18rem;
+  height: 25rem;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.hero-bg {
-  position: absolute;
-  inset: 0;
+.services-hero .hero-bg {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  display: block;
+  background: #888;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.48);
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
   text-align: center;
-  color: #fff;
-  padding: 0 1rem;
+  gap: 0.625rem;
+  padding: 1.5rem;
 }
 
-.hero-content h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
+.hero-overlay h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
   font-weight: 700;
-  margin-bottom: 0.5rem;
 }
 
-.hero-content p {
-  font-size: 1rem;
-  font-weight: 300;
-  margin-bottom: 1.5rem;
+.hero-overlay p {
+  font-size: 0.95rem;
   opacity: 0.9;
 }
 
 
-/* ── 2. CORE SERVICES ── */
+/* CORE SERVICES*/
+
 .core-services {
-  padding: 4rem 6% 3.5rem;
-  background-color: var(--secondary);
+  background: var(--gray-light);
+  padding: 4.5rem 1.5rem;
 }
 
 .services-grid {
@@ -131,611 +98,179 @@
 }
 
 .service-card {
-  background: var(--card);
-  border: 1px solid #e8e8e8;
-  border-radius: var(--radius);
-  padding: 1.5rem 1.25rem;
-  transition: box-shadow 0.25s, transform 0.25s;
-}
-
-.service-card:hover {
-  box-shadow: 0 6px 24px rgba(107, 47, 161, 0.1);
-  transform: translateY(-3px);
+  background: var(--white);
+  border-radius: 8px;
+  padding: 1.75rem 1.375rem;
 }
 
 .service-icon {
-  width: 2.5rem;
-  height: 2.5rem;
-  background: var(--secondary);
-  border-radius: 50%;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 8px;
+  background: rgba(107, 33, 168, 0.08);
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--purple);
   margin-bottom: 1rem;
-  color: var(--primary);
 }
 
-.service-card h3 {
+.service-card h4 {
   font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--foreground);
-  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 0.625rem;
 }
 
 .service-card p {
-  font-size: 0.82rem;
-  color: #666;
-  line-height: 1.65;
-}
-
-
-/* ── 3. HOW IT WORKS ── */
-.how-it-works {
-  padding: 4rem 6% 3.5rem;
-  background: var(--background);
-}
-
-.steps-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 0;
-}
-
-.step-item {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.6rem;
-}
-
-.step-number {
-  width: 2.8rem;
-  height: 2.8rem;
-  border-radius: 50%;
-  background: var(--primary);
-  color: var(--primary-foreground);
-  font-size: 1rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  margin-bottom: 0.4rem;
-}
-
-.step-item h3 {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--foreground);
-}
-
-.step-item p {
-  font-size: 0.82rem;
-  color: #666;
-  line-height: 1.65;
-}
-
-.step-connector {
-  flex-shrink: 0;
-  width: 8%;
-  height: 2px;
-  background: var(--border);
-  margin-top: 1.35rem;
-}
-
-
-/* ── 4. WHY CHOOSE US ── */
-.why-choose {
-  padding: 4rem 6% 3.5rem;
-  background: var(--background);
-}
-
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem 2rem;
-}
-
-.why-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-.why-icon {
-  width: 2.4rem;
-  height: 2.4rem;
-  border-radius: var(--radius);
-  border: 1px solid #e8e8e8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  color: var(--primary);
-}
-
-.why-item h3 {
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: var(--foreground);
-  margin-bottom: 0.35rem;
-}
-
-.why-item p {
-  font-size: 0.82rem;
-  color: #666;
-  line-height: 1.65;
-}
-
-
-/* ── 5. CTA BANNER ── */
-.cta-banner {
-  background: var(--primary);
-  color: var(--primary-foreground);
-  text-align: center;
-  padding: 4rem 6%;
-}
-
-.cta-banner h2 {
-  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-}
-
-.cta-banner p {
-  font-size: 0.92rem;
-  opacity: 0.9;
-  max-width: 36rem;
-  margin: 0 auto 1.75rem;
+  font-size: 0.84rem;
+  color: var(--gray);
   line-height: 1.7;
 }
 
 
-/* ── SHARED COMPONENT STUBS ── */
-/* These are here so the page renders in isolation.
-   Tony Dev's global.css / components.css will override them. */
+/* HOW IT WORKS */
 
-:root {
-  --background:           #ffffff;
-  --foreground:           #0b0b0b;
-  --border:               #e2e2e2;
-  --input:                #fafaf8;
-  --primary:              #6b2fa1;
-  --primary-foreground:   #ffffff;
-  --secondary:            #f5efe8;
-  --secondary-foreground: #1b1b1b;
-  --muted:                #f2f2f2;
-  --accent:               #c59d3b;
-  --accent-foreground:    #ffffff;
-  --card:                 #ffffff;
-  --card-foreground:      #0b0b0b;
-  --font-base:            'Inter', 'Poppins', sans-serif;
-  --radius:               8px;
+.how-it-works {
+  padding: 4.5rem 1.5rem;
 }
 
-body {
-  font-family: var(--font-base);
-  background-color: var(--background);
-  color: var(--foreground);
-  line-height: 1.6;
-}
-
-* { box-sizing: border-box; margin: 0; padding: 0; }
-img { max-width: 100%; display: block; }
-a { text-decoration: none; color: inherit; }
-
-.header {
-  position: sticky; top: 0; z-index: 100;
-  background: var(--background);
-  border-bottom: 1px solid var(--border);
-  padding: 0 6%;
-  height: 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.header-logo {
-  display: flex; align-items: center; gap: 0.5rem;
-  font-weight: 700; font-size: 1rem; color: var(--foreground);
-}
-
-.header-logo svg { color: var(--primary); }
-
-.header-nav {
-  display: flex; gap: 2rem; list-style: none;
-}
-
-.header-nav a {
-  font-size: 0.88rem; font-weight: 400; color: var(--foreground); transition: color 0.2s;
-}
-
-.header-nav a:hover, .header-nav a.active {
-  color: var(--primary); font-weight: 600;
-}
-
-.header-actions {
-  display: flex; align-items: center; gap: 1.2rem;
-}
-
-.header-actions button {
-  background: none; border: none; cursor: pointer;
-  color: var(--foreground); display: flex; align-items: center;
-}
-
-.cart-badge { position: relative; }
-.cart-badge span {
-  position: absolute; top: -6px; right: -6px;
-  background: var(--primary); color: white;
-  font-size: 0.6rem; font-weight: 700;
-  border-radius: 50%; width: 1rem; height: 1rem;
-  display: flex; align-items: center; justify-content: center;
-}
-
-.footer {
-  background: var(--background);
-  border-top: 1px solid var(--border);
-  padding: 3rem 6% 1.5rem;
-}
-
-.footer-top {
+.steps-row {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
-  gap: 2rem;
-  margin-bottom: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
 }
 
-.footer-brand p {
-  font-size: 0.82rem; color: #666;
-  margin: 0.6rem 0 1rem; max-width: 14rem; line-height: 1.7;
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
-.footer-social { display: flex; gap: 0.7rem; }
-.footer-social a {
-  width: 2rem; height: 2rem; border-radius: 50%;
-  border: 1px solid var(--border);
-  display: flex; align-items: center; justify-content: center;
-  color: #666; transition: all 0.2s;
-}
-.footer-social a:hover { border-color: var(--primary); color: var(--primary); }
-
-.footer-col h4 {
-  font-size: 0.85rem; font-weight: 600;
-  color: var(--foreground); margin-bottom: 1rem;
-}
-
-.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
-.footer-col ul li a { font-size: 0.8rem; color: #666; transition: color 0.2s; }
-.footer-col ul li a:hover { color: var(--primary); }
-
-.footer-bottom {
-  border-top: 1px solid var(--border);
-  padding-top: 1.25rem;
+.step-num {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--purple);
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: 700;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-.footer-bottom p { font-size: 0.78rem; color: #999; }
-
-.footer-legal { display: flex; gap: 1.5rem; }
-.footer-legal a { font-size: 0.78rem; color: #999; transition: color 0.2s; }
-.footer-legal a:hover { color: var(--primary); }
-
-
-/* ============================================================
-   RESPONSIVE — Mobile & Tablet
-   All sizing in rem and % as per project guide
-   Breakpoints: tablet ≤ 1024px | mobile ≤ 768px | small ≤ 480px
-   ============================================================ */
-
-
-/* ── Hamburger Menu (mobile only) ── */
-.hamburger {
-  display: none;
-  flex-direction: column;
   justify-content: center;
-  gap: 0.3rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.25rem;
 }
 
-.hamburger span {
-  display: block;
-  width: 1.4rem;
-  height: 2px;
-  background-color: var(--foreground);
-  border-radius: 2px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* Hamburger open state */
-.hamburger.open span:nth-child(1) {
-  transform: translateY(0.4rem) rotate(45deg);
-}
-.hamburger.open span:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.open span:nth-child(3) {
-  transform: translateY(-0.4rem) rotate(-45deg);
-}
-
-/* Mobile nav drawer */
-.mobile-nav {
-  display: none;
-  flex-direction: column;
-  background: var(--background);
-  border-bottom: 1px solid var(--border);
-  padding: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease, padding 0.3s ease;
-}
-
-.mobile-nav.open {
-  max-height: 20rem;
-  padding: 1rem 6%;
-}
-
-.mobile-nav a {
+.step h4 {
   font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--foreground);
-  padding: 0.75rem 0;
-  border-bottom: 1px solid var(--muted);
-  transition: color 0.2s;
+  font-weight: 700;
+  color: var(--black);
 }
 
-.mobile-nav a:last-child {
-  border-bottom: none;
-}
-
-.mobile-nav a:hover,
-.mobile-nav a.active {
-  color: var(--primary);
+.step p {
+  font-size: 0.85rem;
+  color: var(--gray);
+  line-height: 1.7;
 }
 
 
-/* ================================================================
-   TABLET — max-width: 1024px
-   ================================================================ */
+/* WHY CHOOSE PLATFORM */
+
+.why-platform {
+  background: var(--gray-light);
+  padding: 4.5rem 1.5rem;
+}
+
+.platform-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+}
+
+.platform-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.platform-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 8px;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--black);
+  flex-shrink: 0;
+}
+
+.platform-item h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+}
+
+.platform-item p {
+  font-size: 0.85rem;
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+
+/* CTA BANNER */
+
+.cta-banner {
+  background: var(--purple);
+  padding: 4.5rem 1.5rem;
+  text-align: center;
+}
+
+.cta-inner {
+  max-width: 35rem;
+  margin: 0 auto;
+}
+
+.cta-inner h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.875rem;
+}
+
+.cta-inner p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+}
+
+
+/* RESPONSIVE*/
+
 @media (max-width: 1024px) {
-
-  /* Hero */
-  .services-hero {
-    height: 38vh;
-  }
-
-  /* Core Services — 2 columns */
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* How It Works — 2x2 grid */
   .steps-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
-
-  .step-connector {
-    display: none;
-  }
-
-  /* Why Choose — 2 columns */
-  .why-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Footer — 2 columns */
-  .footer-top {
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
   }
 }
 
-
-/* ================================================================
-   MOBILE — max-width: 768px
-   ================================================================ */
 @media (max-width: 768px) {
-
-  /* Header — hide desktop nav, show hamburger */
-  .header {
-    padding: 0 5%;
-  }
-
-  .header-nav {
-    display: none;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  /* Show mobile nav drawer below header */
-  .mobile-nav {
-    display: flex;
-  }
-
-  /* Hero */
-  .services-hero {
-    height: 55vw;
-    min-height: 14rem;
-  }
-
-  .hero-content h1 {
-    font-size: clamp(1.6rem, 6vw, 2.4rem);
-  }
-
-  .hero-content p {
-    font-size: 0.88rem;
-    margin-bottom: 1.2rem;
-  }
-
-  /* Section spacing */
-  .core-services,
-  .how-it-works,
-  .why-choose {
-    padding: 3rem 5%;
-  }
-
-  .cta-banner {
-    padding: 3rem 5%;
-  }
-
-  /* Section headers */
-  .section-header {
-    margin-bottom: 1.75rem;
-  }
-
-  .section-header h2 {
-    font-size: 1.3rem;
-  }
-
-  .section-header p {
-    font-size: 0.85rem;
-  }
-
-  /* Core Services — single column */
-  .services-grid {
+  .platform-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .service-card {
-    padding: 1.25rem 1rem;
-  }
-
-  /* How It Works — single column */
-  .steps-row {
-    display: flex;
-    flex-direction: column;
-    gap: 1.75rem;
-  }
-
-  .step-item {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-
-  .step-number {
-    width: 2.4rem;
-    height: 2.4rem;
-    font-size: 0.9rem;
-    flex-shrink: 0;
-    margin-bottom: 0;
-  }
-
-  .step-item h3 {
-    font-size: 0.92rem;
-    margin-bottom: 0.25rem;
-  }
-
-  /* Why Choose — single column */
-  .why-grid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-
-  /* CTA */
-  .cta-banner h2 {
-    font-size: 1.4rem;
-  }
-
-  .cta-banner p {
-    font-size: 0.88rem;
-  }
-
-  /* Footer */
-  .footer {
-    padding: 2.5rem 5% 1.25rem;
-  }
-
-  .footer-top {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .footer-brand {
-    grid-column: 1 / -1;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 0.6rem;
-    text-align: center;
-  }
-
-  .footer-legal {
-    gap: 1rem;
   }
 }
 
-
-/* ================================================================
-   SMALL MOBILE — max-width: 480px
-   ================================================================ */
 @media (max-width: 480px) {
-
-  /* Header */
-  .header-actions button:first-child,
-  .header-actions button:nth-child(2) {
-    display: none; /* hide search & account on very small screens */
-  }
-
-  /* Hero */
-  .services-hero {
-    height: 60vw;
-  }
-
-  .hero-content h1 {
-    font-size: 1.5rem;
-  }
-
-  .hero-content p {
-    font-size: 0.82rem;
-  }
-
-  .btn-primary,
-  .btn-outline-white {
-    font-size: 0.82rem;
-    padding: 0.65rem 1.2rem;
-  }
-
-  /* Sections */
-  .core-services,
-  .how-it-works,
-  .why-choose,
-  .cta-banner {
-    padding-left: 4%;
-    padding-right: 4%;
-  }
-
-  /* Section header */
-  .section-header h2 {
-    font-size: 1.2rem;
-  }
-
-  /* Why items — stack icon above text on very small screens */
-  .why-item {
-    flex-direction: column;
-    gap: 0.6rem;
-  }
-
-  /* Footer — fully single column */
-  .footer-top {
+  .services-grid {
     grid-template-columns: 1fr;
   }
 
-  .footer-legal {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.4rem;
+  .steps-row {
+    grid-template-columns: 1fr;
   }
 }
