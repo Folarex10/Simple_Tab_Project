@@ -66,13 +66,13 @@ Follow these steps to get the project running on your local machine:
 ### Step 1: Clone the Repository
 ```bash
 git clone [repository-url]
-
+```
 OR download the ZIP file from GitHub and extract it.
 
 ### Step 2: Navigate to Project Directory
 ```bash
 cd simple-tabs-project
-
+```
 ### Step 3: Open the Application
 
 Simply open the index.html file in any modern web browser:
@@ -121,6 +121,8 @@ NAMES
 7. Anthony Michael
 8. Ismaeel Olayiwola
 9. Timothy Olaleye
+10. kolapo faridat 
+11. Emmanuel Heritage 
 
 Note: This project was a collaborative effort where each team member contributed valuable insights and feedback throughout the development process.
 
