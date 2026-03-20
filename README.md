@@ -125,7 +125,6 @@ NAMES
 7. Anthony Michael
 8. Ismaeel Olayiwola
 9. Timothy Olaleye
-10. ⁠Oyedele Oluwaferanmi
 
 Note: This project was a collaborative effort where each team member contributed valuable insights and feedback throughout the development process.
 
