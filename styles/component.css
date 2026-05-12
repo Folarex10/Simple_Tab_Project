@@ -370,9 +370,7 @@ a {
 }
  
  
-/* =====================
-   SUCCESS POPUP
-   ===================== */
+/* SUCCESS POPUP */
  
 .success-popup {
   position: fixed;
@@ -390,7 +388,7 @@ a {
   border-radius: 12px;
   padding: 40px 32px;
   text-align: center;
-  max-width: 400px;
+  max-width: 24rem;
   width: 100%;
   display: flex;
   flex-direction: column;
